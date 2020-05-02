@@ -1,0 +1,30 @@
+<br>
+<br>
+<br>
+<br>
+
+<table class="table table-info table-bordered table-striped">
+  <tr>
+    <th>#</th>
+    <th scope="col">Buy Item</th>
+    <th scope="col">Price</th>
+    <th scope="col">Number</th>
+    <th scope="col">title</th>
+    <th scope="col"></th>
+  </tr>
+<tr class="cart-item" *ngFor="let item of items;let i = index">
+
+      <td><span>{{ i+1 }} </span></td>
+      <td><span>{{ item.name }} </span></td>
+      <td><span>{{ item.price | currency }}</span></td>
+      <td><input class = "form-control" [(ngModel)]="item.number"/></td>
+      <td><span>{{ item.title }}</span></td>
+
+      <td><button (click)="removeFromCart(item)" class="btn btn-primary btn-lg active" aria-pressed="true">Delete</button></td>
+</tr>
+
+
+</table>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <button class="btn btn-primary btn-lg active" aria-pressed="true" type="submit">Checkout</button>
+</form>

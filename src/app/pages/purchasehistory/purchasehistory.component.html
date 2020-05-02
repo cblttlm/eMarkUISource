@@ -1,0 +1,20 @@
+<br>
+<br>
+<br>
+<br>
+<table class="table table-info table-bordered table-striped">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Buy Item</th>
+      <th scope="col">Price</th>
+      <th scope="col">Number</th>
+      <th scope="col"></th>
+
+    <tr class="app-purchasehistory" *ngFor="let product of productOrders;let i = index">
+      <td><span>{{ i+1 }} </span></td>
+      <td><span>{{ product.name }} </span></td>
+      <td><span>{{ product.price }}</span></td>
+      <td><span>{{ product.number }}</span></td>
+    </tr>
+
+</table>

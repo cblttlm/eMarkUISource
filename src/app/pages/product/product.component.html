@@ -1,0 +1,67 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class ="container-fluid">
+  <div class ="row">
+    <div class = "col-lg-12 bg-dark text-white">
+      <a class = "navbar-brand">Products</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "col-3 p-2">
+      <div>
+      Fillter
+      </div>
+      <div class = "col-lg-12 bg-dark text-white">
+      Start Price
+      </div>
+      <div>
+      <select class = "col-lg-12">
+        <option>100</option>
+        <option>200</option>
+      </select>
+        </div>
+      <div class = "col-lg-12 bg-dark text-white">
+        End Price
+      </div>
+      <div>
+        <select class = "col-lg-12">
+          <option>1000</option>
+          <option>2000</option>
+        </select>
+      </div>
+      <div class = "col-lg-12 bg-dark text-white">
+        Manufacturer
+      </div>
+      <div>
+        <select class = "col-lg-12" [(ngModel)]="manufacturer">
+          <option>iphone</option>
+          <option>xiaomi</option>
+        </select>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="filter()">Filter</button>
+    </div>
+    <div class = "col-9 p-2">
+      <div class="row">
+        <div *ngFor="let product of products; index as productId" class="col-md-4 col-sm-4 col-lg-4">
+
+          <div class="col-sm-6">
+            <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+              <img [src]="product.pic" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text"><a [title]="product.name + ' details'" [routerLink]="['/products', productId]">{{ product.name }}</a></p>
+                <h4 class="pull-right">{{product.price | currency}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

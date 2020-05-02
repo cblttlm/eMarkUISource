@@ -1,0 +1,45 @@
+<br>
+<br>
+<br>
+<br>
+<table class="table table-info table-bordered table-striped">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Buy Item</th>
+      <th scope="col">Price</th>
+      <th scope="col">Number</th>
+      <th scope="col">Discription</th>
+    </tr>
+    <tr class="cart-item" *ngFor="let product of products;let i = index">
+      <td><span>{{ i+1 }} </span></td>
+      <td><span>{{ product.name }} </span></td>
+      <td><span>{{ product.price | currency }}</span></td>
+      <td><span>{{ product.number }}</span></td>
+      <td><span>{{ product.discription   }}</span></td>
+    </tr>
+</table>
+
+<!--<form>-->
+<!--  <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" routerLink="/products" routerLinkActive="active">Back To Search</a>-->
+<!--  <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" routerLink="/login" routerLinkActive="active">Checkout</a>-->
+<!--  <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" routerLink="/Sign-in" routerLinkActive="active">Logout</a>-->
+<!--</form>-->
+<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">-->
+
+<!--  <div>-->
+<!--    <label for="name">-->
+<!--      Name-->
+<!--    </label>-->
+<!--    <input id="name" type="text" formControlName="name">-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <label for="address">-->
+<!--      Address-->
+<!--    </label>-->
+<!--    <input id="address" type="text" formControlName="address">-->
+<!--  </div>-->
+
+<!--  <button class="button" type="submit">Purchase</button>-->
+
+<!--</form>-->

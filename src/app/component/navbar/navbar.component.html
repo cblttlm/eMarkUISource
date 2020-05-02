@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md fixed-top bg-dark">
+  <a class="navbar-brand" href="#">eMart</a>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+    </ul>
+<!--    <input class="form-inline mt-2 mt-md-0"  #NaviForm="ngForm" >-->
+      <input type="text" [(ngModel)]="searchContent" id="searchContent" aria-label="First name">
+    <button class="btn btn-primary" (click)="Search(searchContent)">Search</button>
+    <button *ngIf="isBuyer" class="btn btn-primary" type="submit" [routerLink]="['/Cart']">My Cart</button>
+    <button *ngIf="!isLogin" class="btn btn-primary" type="submit" [routerLink]="['/log-in']">Log in</button>
+    <button *ngIf="isLogin" class="btn btn-primary" type="submit" (click)="logOut()">Log Out</button>
+    <button *ngIf="isSeller" class="btn btn-primary" type="submit" [routerLink]="['/add-product']">add product</button>
+    <button *ngIf="isSeller" class="btn btn-primary" type="submit" [routerLink]="['/displayproduct']">display product</button>
+    <button class="btn btn-primary" type="submit" [routerLink]="['/purchasehistory']">My Orders</button>
+<!--    </form>-->
+  </div>
+</nav>

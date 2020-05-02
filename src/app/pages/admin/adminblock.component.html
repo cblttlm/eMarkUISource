@@ -1,0 +1,37 @@
+<br>
+<br>
+<br>
+<br>
+<div class = "col-lg-12 bg-dark text-white">
+  <a class = "navbar-brand">Block/Unblock a specific Seller</a>
+</div>
+<table class="table table-info table-bordered table-striped">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Seller name</th>
+    <th scope="col">Product</th>
+  </tr>
+  <tr>
+      <td>1</td>
+      <td>jone</td>
+      <td><select class = "col-lg-12">
+        <option>iphone</option>
+        <option>xiaomi</option>
+      </select></td>
+      <td><button pa-attr class="btn btn-primary btn-lg active" aria-pressed="true">block</button></td>
+  </tr>
+</table>
+<div class = "col-lg-12 bg-dark text-white">
+  <a class = "navbar-brand">Block/Unblock a specific Buyer</a>
+</div>
+<table class="table table-info table-bordered table-striped">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Buyer name</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>jone</td>
+    <td><button pa-attr class="btn btn-primary btn-lg active" aria-pressed="true" (click)="onClick()">{{btnDisplayName}}</button></td>
+  </tr>
+</table>

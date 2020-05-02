@@ -1,0 +1,23 @@
+<div class="div-signin">
+  <form class="form-signin" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+    <h1 class="h3 mb-3 font-weight-normal">Create account</h1>
+    <p *ngFor="let alert of alerts">
+      <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+    </p>
+    <div align="left"><label class = "text-dark">Your Name</label></div>
+    <label for="userId" class="sr-only">Your Name</label>
+    <input ngModel name="userId" id="userId" class="form-control" placeholder="userId" type="text">
+    <div align="left"><label class = "text-dark">Email</label></div>
+    <label for="email" class="sr-only">Email</label>
+    <input ngModel name="email" id="email" class="form-control" placeholder="email" type="text">
+    <div align="left"><label class = "text-dark">Mobile Number</label></div>
+    <label for="MobileNumber" class="sr-only">Mobile Number</label>
+    <input ngModel name="MobileNumber" id="MobileNumber" class="form-control" placeholder="MobileNumber" type="text">
+    <div align="left"><label class = "text-dark">Password</label></div>
+    <label for="password" class="sr-only">Password</label>
+    <input ngModel name="password" type="password" id="password" class="form-control" placeholder="password" >
+    <label for="repassword" class="sr-only">Re-enter Password</label>
+    <input ngModel name="repassword" type="repassword" id="repassword" class="form-control" placeholder="password" >
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Create your eMart account</button>
+  </form>
+</div>
